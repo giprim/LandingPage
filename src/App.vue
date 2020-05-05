@@ -14,7 +14,13 @@
 				<router-link class="signup" to="/signup">Sign up</router-link>
 			</div>
 		</nav>
-		<router-view />
+		<transition
+			name="trans"
+			enter-active-class="animated fadeIn slow"
+			leave-active-class="animated fadeOut slow"
+		>
+			<router-view />
+		</transition>
 	</div>
 </template>
 
@@ -29,10 +35,18 @@ export default {
 </script>
 
 <style>
+@import 'https://cdn.jsdelivr.net/npm/animate.css@3.5.1';
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+.page {
+	position: relative;
+	/* top: 0; */
+	/* width: auto; */
 }
 
 #app {

@@ -1,5 +1,5 @@
 <template>
-	<div class="home">
+	<div class="home page">
 		<HelloWorld msg="Welcome to Your App" />
 	</div>
 </template>
